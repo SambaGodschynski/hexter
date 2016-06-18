@@ -26,10 +26,8 @@
 #ifndef _HEXTER_SYNTH_H
 #define _HEXTER_SYNTH_H
 
-#include <pthread.h>
+#include "dummy_data_types.h"
 
-#include <ladspa.h>
-#include <dssi.h>
 
 #include "hexter_types.h"
 #include "hexter.h"
@@ -67,7 +65,7 @@ struct _hexter_instance_t
     signed char     held_keys[8];      /* for monophonic key tracking, an array of note-ons, most recently received first */
 
     /* patches and edit buffer */
-    pthread_mutex_t patches_mutex;
+    sg_mutex_t patches_mutex;
     int             pending_program_change;
 
     dx7_patch_t    *patches;
@@ -138,7 +136,7 @@ struct _hexter_synth_t {
     int                instance_count;
     hexter_instance_t *instances;
 
-    pthread_mutex_t    mutex;
+    sg_mutex_t    mutex;
     int                mutex_grab_failed;
 
     unsigned long      nugget_remains;

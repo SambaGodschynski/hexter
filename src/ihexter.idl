@@ -1,0 +1,36 @@
+interface SampleContainer {
+  void SampleContainer(long blockSize);
+  float get(long idx);
+  void set(long idx, float value);
+  void copyTo([Ref]SampleContainer dst);
+  void clear();
+};
+
+interface ByteContainer {
+  void ByteContainer(long size);
+  float get(long idx);
+  void set(long idx, float value);
+  void copyTo([Ref]ByteContainer dst);
+  void clear();
+};
+
+
+interface EventContainer {
+  void EventContainer();
+  void addNoteOn(long ticks, byte value1, byte value2);
+  void addNoteOff(long ticks, byte value1, byte value2);
+  long getNumEvents();
+  void clear();
+};
+
+interface HexterJs {
+  void HexterJs();
+  void startUp(long sampleRate, long maxBlockSize);
+  void tearDown();
+  void render([Ref] SampleContainer _out, [Ref] EventContainer events,long blockSize);
+  void sendSysex([Ref] ByteContainer bytes);
+  void fft([Ref] SampleContainer inOut);
+  void allNotesOff();
+  void allVoicesOff();
+};
+

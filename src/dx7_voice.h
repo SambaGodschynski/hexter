@@ -26,9 +26,8 @@
 #ifndef _DX7_VOICE_H
 #define _DX7_VOICE_H
 
-#include <ladspa.h>
-
 #include "hexter_types.h"
+#include "dummy_data_types.h"
 
 struct _dx7_patch_t
 {
