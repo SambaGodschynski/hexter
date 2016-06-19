@@ -1,3 +1,24 @@
+This is a javascript 'port' of the 'hexter' plugin by Sean Bolton. 
+(It's not actually a port, it's more an emscripten compiler setup and a wrapper class)
+
+Since I use this as sound generator on my DX7 portal (htps://dx7.vstforx.de), I've only 'ported' 
+the processing part of 'hexter', so all the GUI elements are removed.
+The 'ihexter.idl' file contains a description of 'hexter.js'.
+
+To build 'hexter.js' you need to:
+
+   +  install emscripten (http://kripken.github.io/emscripten-site)
+   +  run make
+
+--
+samba_godschynski@vstforx.de
+
+
+
+
+The original readme:
+
+
 
                                 hexter
                                 ======
