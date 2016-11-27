@@ -1,4 +1,10 @@
 # Created by https://www.gitignore.io/api/emacs
+*.pkl
+*.out
+*.mem
+*.wav
+*.bc
+*.o
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
