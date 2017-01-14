@@ -5,6 +5,7 @@
 *.wav
 *.bc
 *.o
+*.exe
 
 ### Emacs ###
 # -*- mode: gitignore; -*-

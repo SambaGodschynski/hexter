@@ -96,6 +96,5 @@ void writeWav(const std::string &path, const AudioBuffer &buffer)
 			44100 
 	);
     wav.writef(buffer.data(), buffer.size());
-    std::cout<< "wrote " << path << std::endl;
 }
 

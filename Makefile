@@ -26,7 +26,7 @@ test: $(CFILES)
 	$(CXX) $(CXXFLAGS) $^ $(SRC)/i_hexter.cpp $(SRC)/test.cpp -o run_test.js
 
 cli: $(GCCFILES)
-	g++ $(CXXFLAGS) $^ $(INC_SNDFILE) $(SRC)/i_hexter.cpp $(SRC)/hexter-cli.cpp $(LNK_SNDFILE) -o hexter-cli.js 
+	g++ $(CXXFLAGS) $^ $(INC_SNDFILE) $(SRC)/i_hexter.cpp $(SRC)/hexter-cli.cpp $(LNK_SNDFILE) -o hexter-cli.exe
 
 $(SRC)/glue.cpp : $(SRC)/ihexter.idl
 	$(WEBIDL) $^ $(SRC)/glue
@@ -36,4 +36,4 @@ $(SRC)/glue.cpp : $(SRC)/ihexter.idl
 clean:
 	rm -f $(SRC)/*.o $(SRC)/*.bc $(SRC)/*.out $(SCR)/*.pkl $(SRC)/glue.cpp $(SRC)/glue.js
 	rm -f *.js *.js.mem *.bc *.out *.pkl *.o
-	rm -f hexter-cli
+	rm -f hexter-cli.*
