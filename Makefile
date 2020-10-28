@@ -20,7 +20,7 @@ CXXFLAGS=$(CFLAGS) -std=c++11
 	gcc $(CFLAGS) -c $^ -o $@
 
 ihexter:$(CFILES) $(SRC)/glue.cpp
-	$(CXX) $(CXXFLAGS) $(CFILES) $(SRC)/i_hexter.cpp $(SRC)/hexter_js.cpp $(SRC)/gluewrapper.cpp -o hexter.js --post-js $(SRC)/glue.js
+	$(CXX) $(CXXFLAGS) $(CFILES) $(SRC)/i_hexter.cpp $(SRC)/hexter_js.cpp $(SRC)/gluewrapper.cpp -o dist/hexter.js --post-js $(SRC)/glue.js
 
 test: $(CFILES)
 	$(CXX) $(CXXFLAGS) $^ $(SRC)/i_hexter.cpp $(SRC)/test.cpp -o run_test.js
@@ -35,5 +35,5 @@ $(SRC)/glue.cpp : $(SRC)/ihexter.idl
 
 clean:
 	rm -f $(SRC)/*.o $(SRC)/*.bc $(SRC)/*.out $(SCR)/*.pkl $(SRC)/glue.cpp $(SRC)/glue.js
-	rm -f *.js *.js.mem *.bc *.out *.pkl *.o
+	rm -f *.js *.js.mem *.bc *.out *.pkl *.o *.wasm
 	rm -f hexter-cli.*

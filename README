@@ -8,6 +8,7 @@ Please find the 'ihexter.idl' to see which functions are supported by 'hexter.js
 To build 'hexter.js' you need to:
 
    +  install emscripten (http://kripken.github.io/emscripten-site)
+   + make sure your have a environment variable `EMSCRIPTEN` which points to the emscripten folder (the folder where the `em++` binary can be found e.g. `emsdk/upstream/emscripten/`)
    +  run make
 
 --
